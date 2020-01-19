@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(145deg, #000000, #8f8f8f);
+    background-attachment: fixed;
+}
+
+header {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#gameTable {
+    border: 2px solid white;
+    height: 600px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
