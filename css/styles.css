@@ -10,10 +10,40 @@ header {
     font-family: 'Quicksand', sans-serif;
 }
 
-#gameTable {
-    border: 2px solid white;
-    height: 600px;
-    width: 600px;
+td {
+    border: 1px solid white;
+
+}
+
+#buttons {
     margin-left: auto;
     margin-right: auto;
+    table-layout: fixed;
+    width: 50%;
 }
+
+#playComputer, #playFriend {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 20px;
+    word-wrap: break-word;
+}
+
+#gameTable {
+    border: 3px solid white;
+    height: 500px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+#playComputer:hover, #playFriend:hover {
+    color: #42ffad;
+    border-color: #42ffad;
+}
+
+
