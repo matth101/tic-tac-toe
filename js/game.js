@@ -39,12 +39,12 @@ function addEventListeners() {
         let clicked = event.target;
 
         if (clicked.id == "xButton" && !started) {
-            turn = "X";
+            turn = "x";
             started = true;
             render();
         }
         if (clicked.id == "oButton" && !started) {
-            turn = "O";
+            turn = "o";
             started = true;
             render();
         }
@@ -62,7 +62,7 @@ function init() {
         "", "", "",
         "", "", ""
     ];
-    turn = "?";
+    turn = "...";
     win = null;
     started = false;
 
@@ -78,10 +78,10 @@ function render() {
         squares[index].textContent = mark;
     });
 
-    scores.textContent = `X TOTAL WINS: ${xScore} | O TOTAL WINS: ${yScore}`;
-    xButton.textContent = "X";
-    oButton.textContent = "O";
-    turnUpdate.textContent = (win === "T" ? `TIE GAME` : (win ? `${win} WINS` : `TURN: ${turn}`));
+    scores.textContent = `x total wins: ${xScore} | o total wins: ${yScore}`;
+    xButton.textContent = "x";
+    oButton.textContent = "o";
+    turnUpdate.textContent = (win === "T" ? `tie game` : (win ? `${win.toLowerCase()} wins` : `turn: ${turn}`));
 }
 
 /**
@@ -99,7 +99,7 @@ function takeTurn(event) {
 
         if (board[index] === "") {
             board[index] = turn;
-            turn = turn === "X" ? "O" : "X";
+            turn = turn === "x" ? "o" : "x";
             win = getWinner();
 
             render();
@@ -123,10 +123,10 @@ function getWinner() {
             board[condition[1]] === board[condition[2]]
         ) {
             winner = board[condition[0]];
-            if (winner === "X") {
+            if (winner === "x") {
                 xScore++;
             }
-            if (winner === "O") {
+            if (winner === "o") {
                 yScore++;
             }
         }

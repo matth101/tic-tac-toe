@@ -1,11 +1,10 @@
 body {
     text-align: center;
-    font-family: "Quicksand", monospace;
+    font-family: "Major Mono Display", monospace;
     background-color: bisque;
 }
 
 h1 {
-    font-family: "Major Mono Display", monospace;
     font-size: 55px;
     margin: 2%;
 }
