@@ -2,47 +2,50 @@
 
 <html>
     <head>
-        <title>TIC TAC TOE</title>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-        <!-- stylesheets & fonts -->
-        <link rel="stylesheet" href="css/styles.css"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Quicksand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+        <script defer src="js/game.js"></script>
+
+        <title>Tic-Tac-Toe</title>
     </head>
     <body>
-        <header>Tic-Tac-Toe</header>
-        <hr>
-        <br>
-        <br>
+        <header>
+            <h1>tic | tac | toe</h1>
+            <hr>
+        </header>
 
-        <table id="buttons">
-            <tr>
-                <td id="playComputer">Play against the computer!</td>
-                <td id="playFriend">Play against a friend!</td>
-            </tr>
-        </table>
+        <p id="scorekeeper"><p>
 
-        <br>
-        <br>
+        <!-- Container holding header items -->
+        <div class="container column">
+            <div class="container barrier" id="turnButtons">
+                <h2 id="turnChoice">CHOOSE TURN:</h2>
+                <div id="xButton"></div>
+                <div id="oButton"></div>
+                <h2 id="turnUpdate"></h2>
+            </div>
 
-        <table id="gameTable">
-            <tr>
-                <td id="tablePoint"></td>
-                <td id="tablePoint"></td>
-                <td id="tablePoint"></td>            
-            </tr>
-            <tr>
-                <td id="tablePoint"></td>
-                <td id="tablePoint"></td>
-                <td id="tablePoint"></td >
-            </tr>
-            <tr>
-                <td id="tablePoint"></td>
-                <td id="tablePoint"></td>
-                <td id="tablePoint"></td>
-            </tr>
-        </table>         
-        
+            <!-- The actual playing board -->
+            <div class="container wrap" id="board">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+
+            <!-- Button to reset game -->
+            <div id="reset-button">PLAY AGAIN</div>
+        </div>
+
     </body>
-
 </html>
